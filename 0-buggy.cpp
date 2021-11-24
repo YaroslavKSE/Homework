@@ -1,4 +1,6 @@
-#include <cstdio>
+using namespace std;
+#include <iostream>
+#include <stdio.h>
 int max_total_sum = 2000;
 int calculate_total(const int costs[], int length) {
     int amount = 0;
@@ -14,5 +16,8 @@ int main() {
     int total = calculate_total(costs, length);
     if (total <= max_total_sum) {
         printf("%d\n", total);
+    }
+    if (total >= max_total_sum) {
+        cout << "The sum is bigger"  << endl;
     }
 }
