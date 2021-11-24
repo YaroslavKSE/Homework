@@ -1,9 +1,18 @@
 #include <cstdio>
-
-int main() {
-    int first_num = 2;
-    int second_num = 3;
-    int sum = first_num + second_num;
-    printf("%d\n", sum);
+int max_total_sum = 2000;
+int calculate_total(const int costs[], int length) {
+    int amount = 0;
+    for (int number = 0; number < length; number++) {
+        amount += costs[number];
+}
+    return amount;
 }
 
+int main() {
+    int costs[] = {100, 299, 599, 1000};
+    int length = sizeof(costs) / sizeof(int);
+    int total = calculate_total(costs, length);
+    if (total <= max_total_sum) {
+        printf("%d\n", total);
+    }
+}
